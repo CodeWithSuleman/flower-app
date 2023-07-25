@@ -5,5 +5,6 @@ class ConstantColor {
   static var productColor2 = 0xffFFE899;
   static var productColor3 = 0xff56D1A7;
   static var productColor4 = 0xffB2E28D;
+  static var productColor5 = 0xffB7EDF9;
   static var whiteColor = 0xffFFFFFF;
 }

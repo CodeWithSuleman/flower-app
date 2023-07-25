@@ -1,7 +1,7 @@
 import 'package:flower_app/utils/constant_colors.dart';
 import 'package:flutter/material.dart';
 
-class PrimaryProduct extends StatefulWidget {
+class ThirdCustomProduct extends StatefulWidget {
   final Color color;
   final String title;
   final String image;
@@ -11,7 +11,7 @@ class PrimaryProduct extends StatefulWidget {
   final String image4;
   final String subtitle;
   final String subtitle2;
-  const PrimaryProduct(
+  const ThirdCustomProduct(
       {super.key,
       required this.title,
       required this.image,
@@ -24,10 +24,10 @@ class PrimaryProduct extends StatefulWidget {
       required this.image1});
 
   @override
-  State<PrimaryProduct> createState() => _PrimaryProductState();
+  State<ThirdCustomProduct> createState() => _PrimaryProductState();
 }
 
-class _PrimaryProductState extends State<PrimaryProduct> {
+class _PrimaryProductState extends State<ThirdCustomProduct> {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -51,10 +51,12 @@ class _PrimaryProductState extends State<PrimaryProduct> {
                 width: width * 1,
                 child: Image.asset(widget.image1)),
             Positioned(
-              left: 160,
+              top: 10,
+              left: 200,
               child: Image.asset(
                 widget.image,
-                width: width * 0.5,
+                width: width * 0.4,
+                height: height * 0.3,
               ),
             ),
             Positioned(
