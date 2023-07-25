@@ -40,7 +40,7 @@ class _PrimaryProductState extends State<PrimaryProduct> {
             Container(
                 decoration: BoxDecoration(
                   color: widget.color,
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(20),
                     topRight: Radius.circular(80),
                     bottomLeft: Radius.circular(10),
@@ -79,11 +79,11 @@ class _PrimaryProductState extends State<PrimaryProduct> {
                 left: 15,
                 top: 80,
                 child: SizedBox(
-                    width: width * 0.4,
+                    width: width * 0.5,
                     child: Text(
                       widget.subtitle,
                       style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 32,
                           color: Color(ConstantColor.secondaryColor)),
                     ))),
             Positioned(
@@ -94,7 +94,7 @@ class _PrimaryProductState extends State<PrimaryProduct> {
                     child: Text(
                       widget.subtitle2,
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           color: Color(ConstantColor.secondaryColor)),
                     ))),
             Positioned(
@@ -105,11 +105,11 @@ class _PrimaryProductState extends State<PrimaryProduct> {
                   height: height * 0.06,
                 )),
             Positioned(
-                top: 130,
+                top: 140,
                 left: 80,
                 child: Image.asset(
                   widget.image4,
-                  height: height * 0.05,
+                  height: height * 0.04,
                 ))
           ],
         )

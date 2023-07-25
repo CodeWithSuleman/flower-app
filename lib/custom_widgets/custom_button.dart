@@ -29,8 +29,11 @@ class CustomButtom extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: height * 0.08),
-              Text(name),
+              SizedBox(height: height * 0.07),
+              Text(
+                name,
+              
+              ),
             ],
           )),
     );

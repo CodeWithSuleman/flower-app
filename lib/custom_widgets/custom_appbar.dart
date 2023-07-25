@@ -43,12 +43,12 @@ class _CustomAppBarState extends State<CustomAppBar> {
           Row(
             children: [
               //  SizedBox(width: width * 0.06),
-              Image.asset(widget.image, height: height * 0.05),
+              Image.asset(widget.image, height: height * 0.04),
               SizedBox(width: width * 0.05),
               Text(
                 widget.title,
                 style: TextStyle(
-                    fontSize: 22, color: Color(ConstantColor.primaryColor)),
+                    fontSize: 20, color: Color(ConstantColor.secondaryColor)),
               ),
             ],
           )

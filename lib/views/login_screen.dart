@@ -19,84 +19,98 @@ class _LogInScreenState extends State<LogInScreen> {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         iconImage: 'assets/images/back.png',
         title: "PLENTIFY",
         image: 'assets/images/logo2.png',
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Text(
-                  "LogIn",
-                  style: TextStyle(
-                      color: Color(ConstantColor.primaryColor), fontSize: 30),
-                ),
-              ],
-            ),
-            SizedBox(height: height * 0.02),
-            Text(
-              "Masukan NISN dan password untuk memulai belajar sekarang",
-              style: TextStyle(
-                color: Color(ConstantColor.primaryColor),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 20),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Color(ConstantColor.primaryColor), fontSize: 36),
+                  ),
+                ],
               ),
-            ),
-            SizedBox(height: height * 0.06),
-            TextFormField(
-              decoration: InputDecoration(
-                hintText: "ENTER EMAIL",
-                label: const Text("Enter Email"),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-            SizedBox(height: height * 0.04),
-            TextFormField(
-              decoration: InputDecoration(
-                hintText: "ENTER PASSWORD",
-                label: const Text("Enter Password"),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                SizedBox(width: width * 0.4),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const SignUpScreen(),
-                        ),
-                      );
-                    },
+              SizedBox(height: height * 0.02),
+              Row(
+                children: [
+                  SizedBox(
+                    width: width * 0.7,
                     child: Text(
-                      "Don't Have an Account",
-                      style:
-                          TextStyle(color: Color(ConstantColor.primaryColor)),
-                    ))
-              ],
-            ),
-            SizedBox(height: height * 0.02),
-            CustomButtom(
-                callback: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const BottomNavBarScreen(),
+                      "Masukan NISN dan password untuk memulai belajar sekarang",
+                      style: TextStyle(
+                          color: Color(ConstantColor.primaryColor),
+                          fontSize: 14),
                     ),
-                  );
-                },
-                bColor: Color(ConstantColor.primaryColor),
-                name: "Login")
-          ],
+                  ),
+                ],
+              ),
+              SizedBox(height: height * 0.05),
+              TextFormField(
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
+                  hintText: "ENTER EMAIL",
+                  label: Text(
+                    "Enter Email",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              SizedBox(height: height * 0.04),
+              TextFormField(
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.lock),
+                  hintText: "ENTER PASSWORD",
+                  label: Text(
+                    "Enter Password",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              Row(
+                children: [
+                  SizedBox(width: width * 0.4),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignUpScreen(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        "Don't Have an Account",
+                        style: TextStyle(
+                            color: Color(ConstantColor.primaryColor),
+                            fontSize: 14),
+                      ))
+                ],
+              ),
+              SizedBox(height: height * 0.02),
+              CustomButtom(
+                  callback: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const BottomNavBarScreen(),
+                      ),
+                    );
+                  },
+                  bColor: Color(ConstantColor.primaryColor),
+                  name: "Login")
+            ],
+          ),
         ),
       ),
     );
