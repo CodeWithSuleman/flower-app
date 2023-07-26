@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 class SecondCustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final String image;
-
   final String title;
   const SecondCustomAppBar({
     super.key,
@@ -21,8 +20,8 @@ class SecondCustomAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _CustomAppBarState extends State<SecondCustomAppBar> {
   @override
   Widget build(BuildContext context) {
-     double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
+   final  double deviceWidth = MediaQuery.of(context).size.width;
+   final double deviceHeight = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 23),
       child: Column(

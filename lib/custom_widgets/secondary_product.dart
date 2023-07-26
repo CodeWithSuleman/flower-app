@@ -18,7 +18,7 @@ class SecondaryProduct extends StatefulWidget {
 class _SecondaryProductState extends State<SecondaryProduct> {
   @override
   Widget build(BuildContext context) {
-     double deviceWidth = MediaQuery.of(context).size.width;
+   final  double deviceWidth = MediaQuery.of(context).size.width;
    
     return Column(
       children: [

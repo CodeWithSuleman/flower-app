@@ -16,8 +16,8 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = MediaQuery.of(context).size.width;
+   final double deviceHeight = MediaQuery.of(context).size.height;
+   final double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: CustomAppBar(
         iconImage: 'assets/images/back.png',

@@ -17,8 +17,8 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
-    double deviceWidth = MediaQuery.of(context).size.width;
+    final double deviceHeight = MediaQuery.of(context).size.height;
+    final double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: const SecondCustomAppBar(
           image: 'assets/images/logo2.png', title: "PLENTIFY"),
@@ -37,7 +37,8 @@ class _ProductsState extends State<Products> {
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                        constraints: BoxConstraints(maxWidth: deviceWidth * 0.8),
+                        constraints:
+                            BoxConstraints(maxWidth: deviceWidth * 0.8),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15)),
                         hintText: "Search",
@@ -98,7 +99,7 @@ class _ProductsState extends State<Products> {
                 flowerImage: 'assets/images/flower1.png',
                 footImage: 'assets/images/foot1.png',
                 subtitle: "Pepromia",
-               secondsubtitle: '\$400',
+                secondsubtitle: '\$400',
                 color: Color(ConstantColor.productColor1),
                 iconImage: 'assets/images/icon1.png',
                 heartImage: 'assets/images/heart.png',
@@ -140,33 +141,33 @@ class _ProductsState extends State<Products> {
                 heartImage: 'assets/images/heart.png',
                 shapeImage: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height:deviceHeight  * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               FourthCustomProduct(
-                image: 'assets/images/product2.png',
+                shapeImage: 'assets/images/product2.png',
                 text:
                     "Caring for plants should be fun. That's why we offer 1-on-1 virtual consultations from the comfort of your home or office. ",
                 color: Color(ConstantColor.productColor1),
-                image2: 'assets/images/icon2.png',
+                iconImage2: 'assets/images/icon2.png',
               ),
               SizedBox(height: deviceHeight * 0.01),
               ThirdCustomProduct(
                 title: "Air Purifier",
-                image: 'assets/images/flower5.png',
-                image2: 'assets/images/foot1.png',
+                flowerImage: 'assets/images/flower5.png',
+                footImage: 'assets/images/foot1.png',
                 subtitle: "Cactus",
-                subtitle2: '\$260',
+                secondsubtitle: '\$260',
                 color: Color(ConstantColor.productColor2),
-                image3: 'assets/images/icon1.png',
-                image4: 'assets/images/heart.png',
-                image1: 'assets/images/Rectangle1.png',
+                iconImage: 'assets/images/icon1.png',
+                heartImage: 'assets/images/heart.png',
+                shapeImage: 'assets/images/Rectangle1.png',
               ),
               SizedBox(height: deviceHeight * 0.01),
               FifthCustomProduct(
                 title: "Invite a Friend and earn Plantify rewards",
-                image: 'assets/images/Rectangle1.png',
+                shapeimage: 'assets/images/Rectangle1.png',
                 subtitle: "Redeem them to get instant discounts",
-                image2: 'assets/images/logo2.png',
-                image3: 'assets/images/ellipse.png',
+                logo: 'assets/images/logo2.png',
+                ellipseImage: 'assets/images/ellipse.png',
                 color: Color(ConstantColor.productColor1),
               ),
               SizedBox(height: deviceHeight * 0.01),

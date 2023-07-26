@@ -4,24 +4,24 @@ import 'package:flutter/material.dart';
 class ThirdCustomProduct extends StatefulWidget {
   final Color color;
   final String title;
-  final String image;
-  final String image1;
-  final String image2;
-  final String image3;
-  final String image4;
+  final String flowerImage;
+  final String shapeImage;
+  final String footImage;
+  final String iconImage;
+  final String heartImage;
   final String subtitle;
-  final String subtitle2;
+  final String secondsubtitle;
   const ThirdCustomProduct(
       {super.key,
       required this.title,
-      required this.image,
+      required this.flowerImage,
       required this.subtitle,
-      required this.image2,
-      required this.subtitle2,
+      required this.footImage,
+      required this.secondsubtitle,
       required this.color,
-      required this.image3,
-      required this.image4,
-      required this.image1});
+      required this.iconImage,
+      required this.heartImage,
+      required this.shapeImage});
 
   @override
   State<ThirdCustomProduct> createState() => _PrimaryProductState();
@@ -30,8 +30,8 @@ class ThirdCustomProduct extends StatefulWidget {
 class _PrimaryProductState extends State<ThirdCustomProduct> {
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
+  final  double deviceWidth = MediaQuery.of(context).size.width;
+  final  double deviceHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
         Stack(
@@ -48,13 +48,13 @@ class _PrimaryProductState extends State<ThirdCustomProduct> {
               ),
               height: deviceHeight * 0.3,
               width: deviceWidth * 1,
-              child: Image.asset(widget.image1),
+              child: Image.asset(widget.shapeImage),
             ),
             Positioned(
               top: 10,
               left: 200,
               child: Image.asset(
-                widget.image,
+                widget.flowerImage,
                 width: deviceWidth * 0.4,
                 height: deviceHeight * 0.3,
               ),
@@ -77,7 +77,7 @@ class _PrimaryProductState extends State<ThirdCustomProduct> {
               top: 28,
               left: 145,
               child: Image.asset(
-                widget.image2,
+                widget.footImage,
                 height: deviceHeight * 0.05,
               ),
             ),
@@ -101,7 +101,7 @@ class _PrimaryProductState extends State<ThirdCustomProduct> {
               child: SizedBox(
                 width: deviceWidth * 0.4,
                 child: Text(
-                  widget.subtitle2,
+                  widget.secondsubtitle,
                   style: TextStyle(
                     fontSize: 20,
                     color: Color(ConstantColor.secondaryColor),
@@ -113,7 +113,7 @@ class _PrimaryProductState extends State<ThirdCustomProduct> {
               top: 130,
               left: 130,
               child: Image.asset(
-                widget.image3,
+                widget.iconImage,
                 height: deviceHeight * 0.06,
               ),
             ),
@@ -121,7 +121,7 @@ class _PrimaryProductState extends State<ThirdCustomProduct> {
               top: 130,
               left: 80,
               child: Image.asset(
-                widget.image4,
+                widget.heartImage,
                 height: deviceHeight * 0.05,
               ),
             ),

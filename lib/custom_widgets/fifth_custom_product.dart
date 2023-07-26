@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 class FifthCustomProduct extends StatefulWidget {
   final Color color;
   final String title;
-  final String image;
-  final String image2;
-  final String image3;
+  final String shapeimage;
+  final String logo;
+  final String ellipseImage;
   final String subtitle;
   const FifthCustomProduct({
     super.key,
     required this.title,
-    required this.image,
+    required this.shapeimage,
     required this.subtitle,
-    required this.image2,
+    required this.logo,
     required this.color,
-    required this.image3,
+    required this.ellipseImage,
   });
 
   @override
@@ -25,8 +25,8 @@ class FifthCustomProduct extends StatefulWidget {
 class _PrimaryProductState extends State<FifthCustomProduct> {
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
-    double deviceHeight = MediaQuery.of(context).size.height;
+   final double deviceWidth = MediaQuery.of(context).size.width;
+  final  double deviceHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
         Stack(
@@ -43,13 +43,13 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               ),
               height: deviceHeight * 0.3,
               width: deviceWidth * 1,
-              child: Image.asset(widget.image),
+              child: Image.asset(widget.shapeimage),
             ),
             Positioned(
               top: 100,
               left: 190,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.03,
                 height: deviceHeight * 0.05,
               ),
@@ -58,7 +58,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 80,
               left: 210,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.05,
                 height: deviceHeight * 0.05,
               ),
@@ -67,7 +67,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 60,
               left: 240,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.04,
                 height: deviceHeight * 0.05,
               ),
@@ -76,7 +76,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 40,
               left: 230,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.03,
                 height: deviceHeight * 0.05,
               ),
@@ -85,7 +85,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 20,
               left: 250,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.02,
                 height: deviceHeight * 0.05,
               ),
@@ -94,7 +94,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 10,
               left: 270,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.01,
                 height: deviceHeight * 0.05,
               ),
@@ -103,7 +103,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 90,
               left: 230,
               child: Image.asset(
-                widget.image3,
+                widget.ellipseImage,
                 width: deviceWidth * 0.04,
                 height: deviceHeight * 0.08,
               ),
@@ -126,7 +126,7 @@ class _PrimaryProductState extends State<FifthCustomProduct> {
               top: 130,
               left: 170,
               child: Image.asset(
-                widget.image2,
+                widget.logo,
                 height: deviceHeight * 0.09,
               ),
             ),

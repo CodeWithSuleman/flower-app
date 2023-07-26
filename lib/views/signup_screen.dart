@@ -14,7 +14,7 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
+   final double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: CustomAppBar(
         iconImage: 'assets/images/back.png',
