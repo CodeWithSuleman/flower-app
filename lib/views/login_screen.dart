@@ -16,8 +16,8 @@ class LogInScreen extends StatefulWidget {
 class _LogInScreenState extends State<LogInScreen> {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: CustomAppBar(
         iconImage: 'assets/images/back.png',
@@ -37,14 +37,14 @@ class _LogInScreenState extends State<LogInScreen> {
                 ),
               ],
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             Text(
               "Masukan NISN dan password untuk memulai belajar sekarang",
               style: TextStyle(
                 color: Color(ConstantColor.primaryColor),
               ),
             ),
-            SizedBox(height: height * 0.06),
+            SizedBox(height: deviceHeight * 0.06),
             TextFormField(
               decoration: InputDecoration(
                 hintText: "ENTER EMAIL",
@@ -54,7 +54,7 @@ class _LogInScreenState extends State<LogInScreen> {
                 ),
               ),
             ),
-            SizedBox(height: height * 0.04),
+            SizedBox(height: deviceHeight * 0.04),
             TextFormField(
               decoration: InputDecoration(
                 hintText: "ENTER PASSWORD",
@@ -67,7 +67,7 @@ class _LogInScreenState extends State<LogInScreen> {
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                SizedBox(width: width * 0.4),
+                SizedBox(width: deviceWidth * 0.4),
                 TextButton(
                     onPressed: () {
                       Navigator.push(
@@ -84,7 +84,7 @@ class _LogInScreenState extends State<LogInScreen> {
                     ))
               ],
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceWidth * 0.02),
             CustomButtom(
                 callback: () {
                   Navigator.push(

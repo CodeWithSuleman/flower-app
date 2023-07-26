@@ -14,8 +14,8 @@ class CustomButtom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+   
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: ElevatedButton(
@@ -29,7 +29,7 @@ class CustomButtom extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(height: height * 0.08),
+              SizedBox(height: deviceHeight * 0.08),
               Text(name),
             ],
           )),

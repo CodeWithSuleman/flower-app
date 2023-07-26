@@ -30,89 +30,101 @@ class ThirdCustomProduct extends StatefulWidget {
 class _PrimaryProductState extends State<ThirdCustomProduct> {
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
         Stack(
           children: [
-            // SizedBox(height: height * 0.4),
             Container(
-                decoration: BoxDecoration(
-                  color: widget.color,
-                  borderRadius: const BorderRadius.only(
-                    bottomRight: Radius.circular(20),
-                    topRight: Radius.circular(80),
-                    bottomLeft: Radius.circular(10),
-                    topLeft: Radius.circular(10),
-                  ),
+              decoration: BoxDecoration(
+                color: widget.color,
+                borderRadius: const BorderRadius.only(
+                  bottomRight: Radius.circular(20),
+                  topRight: Radius.circular(80),
+                  bottomLeft: Radius.circular(10),
+                  topLeft: Radius.circular(10),
                 ),
-                height: height * 0.3,
-                width: width * 1,
-                child: Image.asset(widget.image1)),
+              ),
+              height: deviceHeight * 0.3,
+              width: deviceWidth * 1,
+              child: Image.asset(widget.image1),
+            ),
             Positioned(
               top: 10,
               left: 200,
               child: Image.asset(
                 widget.image,
-                width: width * 0.4,
-                height: height * 0.3,
+                width: deviceWidth * 0.4,
+                height: deviceHeight * 0.3,
               ),
             ),
             Positioned(
-                left: 20,
-                top: 30,
-                child: SizedBox(
-                    width: width * 0.5,
-                    child: Text(
-                      widget.title,
-                      style: TextStyle(
-                          fontSize: 24,
-                          color: Color(ConstantColor.secondaryColor)),
-                    ))),
+              left: 20,
+              top: 30,
+              child: SizedBox(
+                width: deviceWidth * 0.5,
+                child: Text(
+                  widget.title,
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Color(ConstantColor.secondaryColor),
+                  ),
+                ),
+              ),
+            ),
             Positioned(
-                top: 28,
-                left: 145,
-                child: Image.asset(
-                  widget.image2,
-                  height: height * 0.05,
-                )),
+              top: 28,
+              left: 145,
+              child: Image.asset(
+                widget.image2,
+                height: deviceHeight * 0.05,
+              ),
+            ),
             Positioned(
-                left: 15,
-                top: 80,
-                child: SizedBox(
-                    width: width * 0.4,
-                    child: Text(
-                      widget.subtitle,
-                      style: TextStyle(
-                          fontSize: 24,
-                          color: Color(ConstantColor.secondaryColor)),
-                    ))),
+              left: 15,
+              top: 80,
+              child: SizedBox(
+                width: deviceWidth * 0.4,
+                child: Text(
+                  widget.subtitle,
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Color(ConstantColor.secondaryColor),
+                  ),
+                ),
+              ),
+            ),
             Positioned(
-                left: 20,
-                top: 140,
-                child: SizedBox(
-                    width: width * 0.4,
-                    child: Text(
-                      widget.subtitle2,
-                      style: TextStyle(
-                          fontSize: 20,
-                          color: Color(ConstantColor.secondaryColor)),
-                    ))),
+              left: 20,
+              top: 140,
+              child: SizedBox(
+                width: deviceWidth * 0.4,
+                child: Text(
+                  widget.subtitle2,
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Color(ConstantColor.secondaryColor),
+                  ),
+                ),
+              ),
+            ),
             Positioned(
-                top: 130,
-                left: 130,
-                child: Image.asset(
-                  widget.image3,
-                  height: height * 0.06,
-                )),
+              top: 130,
+              left: 130,
+              child: Image.asset(
+                widget.image3,
+                height: deviceHeight * 0.06,
+              ),
+            ),
             Positioned(
-                top: 130,
-                left: 80,
-                child: Image.asset(
-                  widget.image4,
-                  height: height * 0.05,
-                ))
+              top: 130,
+              left: 80,
+              child: Image.asset(
+                widget.image4,
+                height: deviceHeight * 0.05,
+              ),
+            ),
           ],
         )
       ],

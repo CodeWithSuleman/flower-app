@@ -18,8 +18,8 @@ class SecondaryProduct extends StatefulWidget {
 class _SecondaryProductState extends State<SecondaryProduct> {
   @override
   Widget build(BuildContext context) {
-    //var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+     double deviceWidth = MediaQuery.of(context).size.width;
+   
     return Column(
       children: [
         Stack(
@@ -33,7 +33,7 @@ class _SecondaryProductState extends State<SecondaryProduct> {
                 left: 20,
                 top: 30,
                 child: SizedBox(
-                    width: width * 0.5,
+                    width: deviceWidth * 0.5,
                     child: Text(
                       widget.title,
                       style: TextStyle(
@@ -44,7 +44,7 @@ class _SecondaryProductState extends State<SecondaryProduct> {
                 left: 15,
                 top: 100,
                 child: SizedBox(
-                    width: width * 0.4,
+                    width: deviceWidth * 0.4,
                     child: Text(
                       widget.subtitle,
                       style: TextStyle(

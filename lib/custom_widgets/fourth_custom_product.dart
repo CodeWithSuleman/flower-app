@@ -19,31 +19,31 @@ class FourthCustomProduct extends StatefulWidget {
 class _FourthCustomProductState extends State<FourthCustomProduct> {
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+   double deviceWidth = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
         Stack(
           children: [
-            SizedBox(height: height * 0.4),
+            SizedBox(height: deviceHeight * 0.4),
             Container(
                 decoration: BoxDecoration(
                     color: widget.color,
                     borderRadius: BorderRadius.circular(10)),
-                height: height * 0.3,
-                width: width * 1,
+                height: deviceHeight * 0.3,
+                width: deviceWidth * 1,
                 child: Image.asset(widget.image)),
             Positioned(
               left: 130,
               top: 80,
               child: Image.asset(
                 widget.image2,
-                height: height * 0.09,
+                height: deviceHeight * 0.09,
               ),
             ),
             Positioned(
               top: 250,
-              child: Container(width: width * 0.9, child: Text(widget.text)),
+              child: Container(width:deviceWidth* 0.9, child: Text(widget.text)),
             )
           ],
         )

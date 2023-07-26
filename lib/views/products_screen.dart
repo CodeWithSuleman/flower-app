@@ -17,8 +17,8 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    double deviceHeight = MediaQuery.of(context).size.height;
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: const SecondCustomAppBar(
           image: 'assets/images/logo2.png', title: "PLENTIFY"),
@@ -32,12 +32,12 @@ class _ProductsState extends State<Products> {
                   title: "There's a Plant for Everyone",
                   image: 'assets/images/product1.png',
                   subtitle: "Get Your First plant @40% of"),
-              SizedBox(height: height * 0.02),
+              SizedBox(height: deviceHeight * 0.02),
               Row(
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
-                        constraints: BoxConstraints(maxWidth: width * 0.8),
+                        constraints: BoxConstraints(maxWidth: deviceWidth * 0.8),
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(15)),
                         hintText: "Search",
@@ -49,11 +49,11 @@ class _ProductsState extends State<Products> {
                         ),
                         prefixIcon: const Icon(Icons.search)),
                   ),
-                  SizedBox(width: width * 0.04),
+                  SizedBox(width: deviceWidth * 0.04),
                   Image.asset(
                     'assets/images/image2.png',
-                    height: height * 0.09,
-                    width: width * 0.1,
+                    height: deviceHeight * 0.09,
+                    width: deviceWidth * 0.1,
                   )
                 ],
               ),
@@ -95,52 +95,52 @@ class _ProductsState extends State<Products> {
               ),
               PrimaryProduct(
                 title: "Air Purifier",
-                image: 'assets/images/flower1.png',
-                image2: 'assets/images/foot1.png',
+                flowerImage: 'assets/images/flower1.png',
+                footImage: 'assets/images/foot1.png',
                 subtitle: "Pepromia",
-                subtitle2: '\$400',
+               secondsubtitle: '\$400',
                 color: Color(ConstantColor.productColor1),
-                image3: 'assets/images/icon1.png',
-                image4: 'assets/images/heart.png',
-                image1: 'assets/images/Rectangle1.png',
+                iconImage: 'assets/images/icon1.png',
+                heartImage: 'assets/images/heart.png',
+                shapeImage: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               PrimaryProduct(
                 title: "Air Purifier",
-                image: 'assets/images/flower2.png',
-                image2: 'assets/images/foot1.png',
+                flowerImage: 'assets/images/flower2.png',
+                footImage: 'assets/images/foot1.png',
                 subtitle: "WaterMelon",
-                subtitle2: '\$200',
+                secondsubtitle: '\$200',
                 color: Color(ConstantColor.productColor2),
-                image3: 'assets/images/icon1.png',
-                image4: 'assets/images/heart.png',
-                image1: 'assets/images/Rectangle1.png',
+                iconImage: 'assets/images/icon1.png',
+                heartImage: 'assets/images/heart.png',
+                shapeImage: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               PrimaryProduct(
                 title: "Air Purifier",
-                image: 'assets/images/flower3.png',
-                image2: 'assets/images/foot1.png',
+                flowerImage: 'assets/images/flower3.png',
+                footImage: 'assets/images/foot1.png',
                 subtitle: "Crotan Petra",
-                subtitle2: '\$160',
+                secondsubtitle: '\$160',
                 color: Color(ConstantColor.productColor3),
-                image3: 'assets/images/icon1.png',
-                image4: 'assets/images/heart.png',
-                image1: 'assets/images/Rectangle1.png',
+                iconImage: 'assets/images/icon1.png',
+                heartImage: 'assets/images/heart.png',
+                shapeImage: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               PrimaryProduct(
                 title: "Air Purifier",
-                image: 'assets/images/flower4.png',
-                image2: 'assets/images/foot1.png',
+                flowerImage: 'assets/images/flower4.png',
+                footImage: 'assets/images/foot1.png',
                 subtitle: "Bird’s Nest Fern",
-                subtitle2: '\$160',
+                secondsubtitle: '\$160',
                 color: Color(ConstantColor.productColor4),
-                image3: 'assets/images/icon1.png',
-                image4: 'assets/images/heart.png',
-                image1: 'assets/images/Rectangle1.png',
+                iconImage: 'assets/images/icon1.png',
+                heartImage: 'assets/images/heart.png',
+                shapeImage: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height:deviceHeight  * 0.01),
               FourthCustomProduct(
                 image: 'assets/images/product2.png',
                 text:
@@ -148,7 +148,7 @@ class _ProductsState extends State<Products> {
                 color: Color(ConstantColor.productColor1),
                 image2: 'assets/images/icon2.png',
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               ThirdCustomProduct(
                 title: "Air Purifier",
                 image: 'assets/images/flower5.png',
@@ -160,7 +160,7 @@ class _ProductsState extends State<Products> {
                 image4: 'assets/images/heart.png',
                 image1: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               FifthCustomProduct(
                 title: "Invite a Friend and earn Plantify rewards",
                 image: 'assets/images/Rectangle1.png',
@@ -169,19 +169,19 @@ class _ProductsState extends State<Products> {
                 image3: 'assets/images/ellipse.png',
                 color: Color(ConstantColor.productColor1),
               ),
-              SizedBox(height: height * 0.01),
+              SizedBox(height: deviceHeight * 0.01),
               PrimaryProduct(
                 title: "Air Purifier",
-                image: 'assets/images/flower6.png',
-                image2: 'assets/images/foot1.png',
+                flowerImage: 'assets/images/flower6.png',
+                footImage: 'assets/images/foot1.png',
                 subtitle: "Aloe Vera",
-                subtitle2: '\$210',
+                secondsubtitle: '\$210',
                 color: Color(ConstantColor.productColor2),
-                image3: 'assets/images/icon1.png',
-                image4: 'assets/images/heart.png',
-                image1: 'assets/images/Rectangle1.png',
+                iconImage: 'assets/images/icon1.png',
+                heartImage: 'assets/images/heart.png',
+                shapeImage: 'assets/images/Rectangle1.png',
               ),
-              SizedBox(height: height * 0.03),
+              SizedBox(height: deviceHeight * 0.03),
               Row(
                 children: [
                   Text(
