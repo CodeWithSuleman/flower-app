@@ -8,21 +8,21 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+   final double deviceHeight = MediaQuery.of(context).size.height;
+   final double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
         child: Column(
           children: [
-            SizedBox(height: height * 0.04),
+            SizedBox(height: deviceHeight * 0.04),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25),
                 color: Color(ConstantColor.primaryColor),
               ),
-              height: height * 0.5,
-              width: width * 2,
+              height: deviceHeight * 0.5,
+              width: deviceWidth * 2,
               child: Stack(
                 children: [
                   Positioned(
@@ -35,7 +35,7 @@ class SplashScreen extends StatelessWidget {
                     left: 50,
                     child: Image.asset(
                       'assets/images/Logo.png',
-                      width: width * 0.7,
+                      width: deviceWidth * 0.7,
                     ),
                   ),
                   Positioned(
@@ -50,12 +50,12 @@ class SplashScreen extends StatelessWidget {
                   Positioned(
                       child: Image.asset(
                     'assets/images/Vector.png',
-                    height: height * 0.05,
+                    height: deviceHeight * 0.05,
                   ))
                 ],
               ),
             ),
-            SizedBox(height: height * 0.01),
+            SizedBox(height: deviceHeight * 0.01),
             Padding(
               padding: const EdgeInsets.only(right: 140),
               child: Text(
@@ -70,12 +70,12 @@ class SplashScreen extends StatelessWidget {
                   style: TextStyle(
                       color: Color(ConstantColor.primaryColor), fontSize: 40)),
             ),
-            SizedBox(height: height * 0.01),
+            SizedBox(height: deviceHeight * 0.01),
             Text(
               "Jelajahi AiLearn untuk menambah kemampuanmu dalam mengoperasikan Adobe Illustrator",
               style: TextStyle(color: Color(ConstantColor.primaryColor)),
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             CustomButtom(
                 callback: () {
                   Navigator.push(

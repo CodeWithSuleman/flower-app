@@ -14,7 +14,7 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
+   final double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: CustomAppBar(
         iconImage: 'assets/images/back.png',
@@ -34,14 +34,14 @@ class _SignUpState extends State<SignUpScreen> {
                 ),
               ],
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             Text(
               "Masukan No. Handphone Anda dan tunggu kode autentik dikirimkan",
               style: TextStyle(
                 color: Color(ConstantColor.primaryColor),
               ),
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             TextFormField(
               decoration: InputDecoration(
                 hintText: "ENTER USERNAME",
@@ -51,7 +51,7 @@ class _SignUpState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             TextFormField(
               decoration: InputDecoration(
                 hintText: "ENTER EMAIL",
@@ -61,7 +61,7 @@ class _SignUpState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             TextFormField(
               decoration: InputDecoration(
                 hintText: "ENTER PASSWORD",
@@ -71,7 +71,7 @@ class _SignUpState extends State<SignUpScreen> {
                 ),
               ),
             ),
-            SizedBox(height: height * 0.01),
+            SizedBox(height: deviceHeight * 0.01),
             Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -91,7 +91,7 @@ class _SignUpState extends State<SignUpScreen> {
                     ))
               ],
             ),
-            SizedBox(height: height * 0.02),
+            SizedBox(height: deviceHeight * 0.02),
             CustomButtom(
               callback: () {},
               bColor: Color(ConstantColor.primaryColor),
