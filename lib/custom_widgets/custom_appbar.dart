@@ -42,13 +42,12 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ),
           Row(
             children: [
-              //  SizedBox(width: width * 0.06),
               Image.asset(widget.image, height: deviceHeight * 0.05),
               SizedBox(width: deviceWidth * 0.05),
               Text(
                 widget.title,
                 style: TextStyle(
-                    fontSize: 22, color: Color(ConstantColor.primaryColor)),
+                    fontSize: 20, color: Color(ConstantColor.secondaryColor)),
               ),
             ],
           )

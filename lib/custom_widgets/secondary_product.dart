@@ -25,8 +25,12 @@ class _SecondaryProductState extends State<SecondaryProduct> {
         Stack(
           children: [
             Positioned(
-              child: Image.asset(
-                widget.image,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.asset(
+                  widget.image,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Positioned(
@@ -48,7 +52,7 @@ class _SecondaryProductState extends State<SecondaryProduct> {
                     child: Text(
                       widget.subtitle,
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 14,
                           color: Color(ConstantColor.secondaryColor)),
                     ))),
           ],

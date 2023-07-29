@@ -1,5 +1,7 @@
 import 'package:flower_app/utils/constant_colors.dart';
+import 'package:flower_app/views/login_screen.dart';
 import 'package:flower_app/views/products_screen.dart';
+import 'package:flower_app/views/signup_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
@@ -12,10 +14,10 @@ class BottomNavBarScreen extends StatefulWidget {
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   int _currentIndex = 0;
   final screens = [
-    Products(),
-    Products(),
-    Products(),
-    Products(),
+    const Products(),
+    const LogInScreen(),
+    const SignUpScreen(),
+    const Products(),
   ];
 
   @override
@@ -23,27 +25,32 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     return Scaffold(
       body: screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color(ConstantColor.primaryColor),
-        unselectedItemColor: Color(ConstantColor.primaryColor),
-        items: const [
+        selectedLabelStyle: TextStyle(
+          color: Color(ConstantColor.primaryColor),
+        ),
+        items: [
           BottomNavigationBarItem(
               icon: ImageIcon(
-                AssetImage('assets/images/home.png'),
+                const AssetImage('assets/images/home.png'),
+                color: Color(ConstantColor.primaryColor),
               ),
               label: "Home"),
           BottomNavigationBarItem(
               icon: ImageIcon(
-                AssetImage('assets/images/heart.png'),
+                const AssetImage('assets/images/heart.png'),
+                color: Color(ConstantColor.primaryColor),
               ),
               label: "Favorite"),
           BottomNavigationBarItem(
               icon: ImageIcon(
-                AssetImage('assets/images/cart.png'),
+                const AssetImage('assets/images/cart.png'),
+                color: Color(ConstantColor.primaryColor),
               ),
               label: "Your Cart"),
           BottomNavigationBarItem(
               icon: ImageIcon(
-                AssetImage('assets/images/profile.png'),
+                const AssetImage('assets/images/profile.png'),
+                color: Color(ConstantColor.primaryColor),
               ),
               label: "Me"),
         ],

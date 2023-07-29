@@ -123,6 +123,7 @@ class _PrimaryProductState extends State<PrimaryProduct> {
                 height: deviceHeight * 0.05,
               ),
             ),
+
           ],
         )
       ],

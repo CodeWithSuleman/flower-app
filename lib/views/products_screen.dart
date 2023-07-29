@@ -21,7 +21,10 @@ class _ProductsState extends State<Products> {
     final double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: const SecondCustomAppBar(
-          image: 'assets/images/logo2.png', title: "PLENTIFY"),
+          image3: 'assets/images/drawer.png',
+          image2: 'assets/images/notification.png',
+          image: 'assets/images/logo2.png',
+          title: "PLENTIFY"),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: SingleChildScrollView(

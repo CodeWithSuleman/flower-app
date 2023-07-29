@@ -19,7 +19,7 @@ class _LogInScreenState extends State<LogInScreen> {
    final double deviceHeight = MediaQuery.of(context).size.height;
    final double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         iconImage: 'assets/images/back.png',
         title: "PLENTIFY",
         image: 'assets/images/logo2.png',

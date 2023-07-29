@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
    final double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
         child: Column(
           children: [
             SizedBox(height: deviceHeight * 0.04),
