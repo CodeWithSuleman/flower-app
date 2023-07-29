@@ -1,7 +1,7 @@
 import 'package:flower_app/utils/constant_colors.dart';
 import 'package:flutter/material.dart';
 
-class PrimaryProduct extends StatefulWidget {
+class ThirdCustomProduct extends StatefulWidget {
   final Color color;
   final String title;
   final String flowerImage;
@@ -11,7 +11,7 @@ class PrimaryProduct extends StatefulWidget {
   final String heartImage;
   final String subtitle;
   final String secondsubtitle;
-  const PrimaryProduct(
+  const ThirdCustomProduct(
       {super.key,
       required this.title,
       required this.flowerImage,
@@ -24,14 +24,14 @@ class PrimaryProduct extends StatefulWidget {
       required this.shapeImage});
 
   @override
-  State<PrimaryProduct> createState() => _PrimaryProductState();
+  State<ThirdCustomProduct> createState() => _PrimaryProductState();
 }
 
-class _PrimaryProductState extends State<PrimaryProduct> {
+class _PrimaryProductState extends State<ThirdCustomProduct> {
   @override
   Widget build(BuildContext context) {
-   final double deviceWidth = MediaQuery.of(context).size.width;
-   final double deviceHeight = MediaQuery.of(context).size.height;
+  final  double deviceWidth = MediaQuery.of(context).size.width;
+  final  double deviceHeight = MediaQuery.of(context).size.height;
     return Column(
       children: [
         Stack(
@@ -51,10 +51,12 @@ class _PrimaryProductState extends State<PrimaryProduct> {
               child: Image.asset(widget.shapeImage),
             ),
             Positioned(
-              left: 160,
+              top: 10,
+              left: 200,
               child: Image.asset(
                 widget.flowerImage,
-                width: deviceWidth * 0.5,
+                width: deviceWidth * 0.4,
+                height: deviceHeight * 0.3,
               ),
             ),
             Positioned(
@@ -123,7 +125,6 @@ class _PrimaryProductState extends State<PrimaryProduct> {
                 height: deviceHeight * 0.05,
               ),
             ),
-
           ],
         )
       ],

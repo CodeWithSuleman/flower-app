@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 
 class SecondCustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   final String image;
+  final String title;
   final String image2;
   final String image3;
-
-  final String title;
   const SecondCustomAppBar({
     super.key,
     required this.title,
@@ -25,8 +24,8 @@ class SecondCustomAppBar extends StatefulWidget implements PreferredSizeWidget {
 class _CustomAppBarState extends State<SecondCustomAppBar> {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+   final  double deviceWidth = MediaQuery.of(context).size.width;
+   final double deviceHeight = MediaQuery.of(context).size.height;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 23),
       child: Column(
@@ -34,11 +33,9 @@ class _CustomAppBarState extends State<SecondCustomAppBar> {
         children: [
           Row(
             children: [
-              Image.asset(
-                widget.image,
-                height: height * 0.03,
-              ),
-              SizedBox(width: width * 0.04),
+              SizedBox(height: deviceHeight * 0.09),
+              Image.asset(widget.image, height: deviceHeight * 0.03),
+              SizedBox(width: deviceWidth * 0.04),
               Text(
                 widget.title,
                 style: TextStyle(
@@ -61,3 +58,10 @@ class _CustomAppBarState extends State<SecondCustomAppBar> {
     );
   }
 }
+
+
+// <<<<<<< fix-UI-Login-and-Signup
+//   final String image2;
+//   final String image3;
+
+// =======
